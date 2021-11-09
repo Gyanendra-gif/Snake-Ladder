@@ -16,8 +16,22 @@ namespace Snack_Ladder_Problem
         }
         public void play() {
             int Roll = this.diceRoll();
-            this.playerPosition = playerPosition + Roll;
-            Console.WriteLine("Position of Player is: " + playerPosition);
+            int Check = rand.Next(0, 3);
+            switch (Check)
+            {
+                case NO_PLAY:
+                    break;
+                case LADDER:
+                    this.playerPosition += Roll;
+                    break;
+                case SNAKE:
+                    this.playerPosition -= Roll;
+                    if (this.playerPosition < 0)
+                    {
+                        this.playerPosition = 0;
+                    }
+                    break;
+            }
         } 
     }
  }
