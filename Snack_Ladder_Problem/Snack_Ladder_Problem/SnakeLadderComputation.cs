@@ -26,10 +26,14 @@ namespace Snack_Ladder_Problem
                         break;
                     case LADDER:
                         this.playerPosition += Roll;
+                        if (this.playerPosition > WIN)
+                        {
+                            this.playerPosition -= Roll;
+                        }
                         break;
                     case SNAKE:
                         this.playerPosition -= Roll;
-                        if (this.playerPosition < 0)
+                        if (this.playerPosition < START)
                         {
                             this.playerPosition = 0;
                         }
