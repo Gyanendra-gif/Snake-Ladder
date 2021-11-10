@@ -7,7 +7,7 @@ namespace Snack_Ladder_Problem
         static void Main(string[] args)
         {
             SnakeLadderComputation sl = new SnakeLadderComputation();
-            sl.play();
+            sl.Play();
         }
     }
     
