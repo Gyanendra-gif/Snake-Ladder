@@ -30,6 +30,7 @@ namespace Snack_Ladder_Problem
                         if (this.playerPosition > WIN)
                         {
                             this.playerPosition -= roll;
+                            Console.WriteLine("Player is Close to Win");
                         }
                         break;
                     case SNAKE:
@@ -37,10 +38,15 @@ namespace Snack_Ladder_Problem
                         if (this.playerPosition < START)
                         {
                             this.playerPosition = 0;
+                            Console.WriteLine("Sanke Bite");
                         }
                         break;
                 }
+                    count++;
+                Console.WriteLine("The Player Position is :" + this.playerPosition + " " + "with a roll of " +roll);
             }
+            Console.WriteLine("Number of times dice was Rolled to win the game is : " + count);
+            Console.WriteLine("The Player wins the game");
         }
     }
 }
